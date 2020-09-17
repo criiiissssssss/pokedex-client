@@ -37,7 +37,7 @@ export default class Pokemons extends React.Component {
       ],
       isLoading: true,
       isOpen: false,
-      currentPokemon: { Name: null },
+      currentPokemon: { name: null, data: null, url: null },
     };
   }
 
@@ -72,24 +72,67 @@ export default class Pokemons extends React.Component {
     //     })
     //   );
   }
-  OpenModal = (pokemon) => {
-    this.setState({ currentPokemon: pokemon }, () =>
-      this.setState({ isOpen: true })
-    );
+  handleApiCall = (pokemon) => {
+    axios
+      .get(pokemon.url)
+      .then(
+        (data) =>
+          this.setState({
+            currentPokemon: {
+              name: pokemon.name,
+              url: pokemon.url,
+              data: data.data,
+            },
+          }),
+        () => console.log(this.state.currentPokemon)
+      )
+      .catch((error) =>
+        this.setState({
+          isLoading: false,
+          title: "Opps",
+          message: "soorry an ereror occured. please reload the page",
+        })
+      );
   };
-  CloseModal = (e) => {
-    this.setState({ currentPokemon: { Name: null } }, () =>
-      this.setState({ isOpen: false })
-    );
+  OpenModal = (pokemon) => {
+    this.setState({ isLoading: true });
+    axios
+      .get(pokemon.url)
+      .then((data) => {
+        {
+          this.setState(
+            {
+              currentPokemon: {
+                name: pokemon.name,
+                url: pokemon.url,
+                data: data.data,
+              },
+            },
+            () => this.setState({ isLoading: false, isOpen: true })
+          );
+        }
+        console.log("pokemon data", this.state.currentPokemon.data);
+      })
+      .catch((error) =>
+        this.setState({
+          isLoading: false,
+          title: "Opps",
+          message: "soorry an ereror occured. please reload the page",
+        })
+      );
+  };
+  CloseModal = () => {
+    this.setState({
+      isOpen: false,
+    });
   };
 
   render() {
     const { Pokemons, isLoading, List, isOpen, currentPokemon } = this.state;
-
     return (
       <div className={styles.container}>
         {isLoading ? <Loading /> : null}
-        {!isLoading
+        {List
           ? Object.keys(List).map((row) => (
               <div key={row} className={styles.row}>
                 {List[row].map((pokemon) => (

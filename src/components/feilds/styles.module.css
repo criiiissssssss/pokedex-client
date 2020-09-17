@@ -1,0 +1,18 @@
+.container {
+  width: 200px;
+  /* margin: auto; */
+  float: left;
+}
+.content {
+  color: #503f3f;
+  /* text-align: center; */
+  padding-left: 20px;
+  /* margin: auto; */
+  font-size: 15px;
+}
+.flex {
+  display: flex;
+}
+.label {
+  text-transform: capitalize;
+}
