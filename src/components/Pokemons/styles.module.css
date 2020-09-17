@@ -1,0 +1,15 @@
+.container {
+  width: 85%;
+  margin: auto;
+}
+.row {
+  height: 500px;
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.row:last-child {
+  display: flex;
+  margin: auto;
+}

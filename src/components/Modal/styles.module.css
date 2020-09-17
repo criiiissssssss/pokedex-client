@@ -1,0 +1,47 @@
+.Modal {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.659);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.Container {
+  position: relative;
+  display: grid;
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-content: center;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 50px;
+  width: 800px;
+}
+.title span {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 25px;
+  margin: auto;
+  text-transform: capitalize;
+}
+.title button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  background-color: #ea6363;
+  color: white;
+  cursor: pointer;
+}
+.content {
+}
