@@ -1,7 +1,10 @@
 .container {
   width: 85%;
   margin: auto;
+  overflow-y: scroll;
+  height: 1000px;
 }
+
 .row {
   height: 500px;
   margin: auto;
@@ -12,4 +15,16 @@
 .row:last-child {
   display: flex;
   margin: auto;
+}
+.addContainer {
+  margin-bottom: 20px;
+  width: 150px;
+  background-color: yellow;
+  margin-left: auto;
+  border-radius: 50px;
+}
+.addMore {
+  margin: auto;
+  font-size: 80px;
+  text-align: center;
 }

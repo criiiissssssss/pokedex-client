@@ -1,18 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
-
-import "./index.css";
-
-import "./index.css";
-// import Pokemon from "./App";
-import Pokemon from "./components/Pokemons/Pokemons.js";
 import * as serviceWorker from "./serviceWorker";
+
+import Pokemon from "./components/Pokemons/Pokemons.js";
+
+import Header from "./components/Header/Header.js";
+
+import "./index.css";
 
 const App = () => (
   <div className="App">
     <BrowserRouter>
       <React.Fragment>
+        <Header />
         <Switch>
           <Route path="/" exact component={Pokemon} />
         </Switch>
