@@ -4,7 +4,11 @@ import styles from "./styles.module.css";
 
 const feilds = (props) => {
   return (
-    <div className={`${styles.container} ${styles.flex}`}>
+    <div
+      className={`${styles.container} ${styles.flex} ${
+        !props.label ? styles.moves : null
+      }`}
+    >
       {props.label ? (
         <div
           className={`${styles.label} ${
@@ -14,11 +18,7 @@ const feilds = (props) => {
           {props.label + ":"}
         </div>
       ) : null}
-      <div className={styles.content}>
-        {props.index && !props.label
-          ? props.index + ") " + props.ability
-          : props.ability}
-      </div>
+      <div className={styles.content}>{props.ability}</div>
     </div>
   );
 };

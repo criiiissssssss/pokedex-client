@@ -1,18 +1,24 @@
 .container {
-  width: 200px;
+  width: auto;
   /* margin: auto; */
   float: left;
+  padding-bottom: 5px;
+}
+.label {
+  width: auto;
+  text-transform: capitalize;
+}
+.moves {
+  width: 130px !important;
 }
 .content {
-  color: #503f3f;
-  /* text-align: center; */
+  width: auto;
+  color: rgba(0, 0, 0, 0.7);
   padding-left: 20px;
-  /* margin: auto; */
   font-size: 15px;
 }
 .flex {
   display: flex;
 }
-.label {
-  text-transform: capitalize;
+.fieldMoves {
 }
