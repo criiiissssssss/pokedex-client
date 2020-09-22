@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  height: 100px;
+  /* background-color: #8a0227; */
+  margin-bottom: 50px;
+}
+.pokebalImg {
+  width: 80px;
+}
+.img {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  width: 300px;
+}
+.Title {
+  font-size: 40px;
+  text-align: center;
+  background-color: transparent;
+
+  padding-top: 25px;
+}
+
+/* fe0202 red*/
+/* fef200 yellow */
+/* #394bc4  blue */

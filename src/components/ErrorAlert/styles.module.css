@@ -1,0 +1,44 @@
+.Modal {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.Container {
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+.close {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 20px;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.title {
+  margin: auto;
+  width: fit-content;
+  font-size: 25px;
+}
+.message {
+  padding-top: 30px;
+  font-size: 15px;
+  text-align: center;
+}

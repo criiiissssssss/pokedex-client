@@ -1,0 +1,86 @@
+.Modal {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.Container {
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  width: 85vw;
+  height: 85vh;
+  background-color: rgba(63, 94, 175, 0.89);
+  border-radius: 10px;
+}
+.Image {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  width: 350px;
+}
+.image {
+  width: inherit;
+}
+.Transparent {
+  background-color: rgba(46, 48, 53, 0.25);
+  padding: 20px 30px 20px 30px;
+}
+.pokemon {
+  width: 100%;
+}
+.Moves {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 400px;
+}
+.Stats {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 200px;
+  height: 250px;
+}
+
+.title {
+  margin: Auto;
+  width: fit-content;
+  padding-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.field {
+  height: auto;
+  max-height: 380px;
+
+  overflow-y: scroll;
+}
+.flex {
+  display: flex;
+}
+.Types {
+  width: fit-content;
+  margin: auto;
+}
+.info {
+  display: flex;
+  width: 150px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.statsContainer {
+  margin-top: 15px;
+}
+
+.fieldStats {
+  height: 30px;
+  width: 200px;
+}
